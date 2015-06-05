@@ -14,8 +14,8 @@ class World
   end
 end
 
-Benchmark.bm do |proc|
-  proc.report("Rust:") { Hello.process }
-  proc.report("Ruby:") { World.new }
+Benchmark.bm do |n|
+  n.report("Rust:") { Hello.process }
+  n.report("Ruby:") { World.new }
 end
 
